@@ -8,8 +8,7 @@ public class HappyFortuneService implements IFortuneService {
 
 	@Value("${joke.good}")
 	private String fortuneText;
-	
-	@Override
+
 	public String getDailyFortune() {
 		return fortuneText;
 	}
