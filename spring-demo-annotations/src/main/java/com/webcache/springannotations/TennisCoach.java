@@ -10,7 +10,7 @@ public class TennisCoach implements ICoach {
 	private IFortuneService fortuneService;
 
 	public TennisCoach() {
-		System.out.println("Inside constructor");
+		System.out.println("Inside TennisCoach constructor");
 	}
 
 	@Override

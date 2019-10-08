@@ -17,7 +17,7 @@ public class SupCoach implements IWaterCoach {
 	@Autowired
 	public SupCoach(@Qualifier("jokeService1") IJoke jokeService) {
 		this.jokeService = jokeService;
-		System.out.println("Inside constructor");
+		System.out.println("Inside SupCoach constructor");
 	}
 
 	@Override

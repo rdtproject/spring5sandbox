@@ -1,18 +1,17 @@
-package com.webcache.springannotations.autowiredbyfield;
-
-import com.webcache.springannotations.IWaterCoach;
+package com.webcache.springannotations.lifecyclemethods;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class AnnotationDemoApp {
 
 	public static void main(String[] args) {
 		ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
-		IWaterCoach coach = applicationContext.getBean("supCoach2", IWaterCoach.class);
+		IRaceCoach coach = applicationContext.getBean("supCoach4", IRaceCoach.class);
 
-		System.out.println(coach.getDailyWorkout());
-		System.out.println(coach.getDailyFortune());
+		System.out.println(coach.abc());
 
+		System.out.println("Closing app ctx");
 		applicationContext.close();
+		System.out.println("App ctx closed");
 	}
 
 }
