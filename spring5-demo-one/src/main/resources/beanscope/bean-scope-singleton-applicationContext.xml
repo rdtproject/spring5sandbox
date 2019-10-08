@@ -12,7 +12,7 @@
 
 	<bean id="myRandomFortuneService" class="com.webcache.springdemo.RandomFortuneService" />
 
-	<bean id="myCoach" class="com.webcache.springdemo.FootballCoach" scope="prototype">
+	<bean id="myCoach" class="com.webcache.springdemo.beanscope.FootballCoach" scope="singleton">
 		<constructor-arg ref="myFortuneService" />
 		<constructor-arg ref="myRandomFortuneService" />
 	</bean>
