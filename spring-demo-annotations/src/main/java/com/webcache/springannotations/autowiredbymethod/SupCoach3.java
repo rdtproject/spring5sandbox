@@ -12,10 +12,6 @@ public class SupCoach3 implements IWaterCoach {
 
     private IFortuneService fortuneService;
 
-    public SupCoach3() {
-        System.out.println("Inside SupCoach3 constructor");
-    }
-
     @Autowired
     public void setFortuneServicee(IFortuneService fortuneService) {
         this.fortuneService = fortuneService;
