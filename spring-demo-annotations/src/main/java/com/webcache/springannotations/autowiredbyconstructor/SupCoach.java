@@ -4,6 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 /**
  * By occasion example of qualifier to select one of two available implementations of IJoke interface
  * For constructor - more tricky as Qualifier has to be placed next to constructor parameter
@@ -30,4 +33,13 @@ public class SupCoach implements IWaterCoach {
 		return null;
 	}
 
+	@PostConstruct
+	public void postCon() {
+		System.out.println("SupCoach post construct");
+	}
+
+	@PreDestroy
+	public void preDest() {
+		System.out.println("SupCoach pre destroy");
+	}
 }
